@@ -1,0 +1,148 @@
+.cta {
+    display: flex;
+    width: 100vw;
+    height: 35rem;
+    overflow: hidden;
+    padding: 10rem 40rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-shrink: 0;
+    background-image: url(/assets/images/hero/FLRST-CGF-DW.webp);
+    background-position: bottom;
+}
+
+.page-heading {
+    width: 25.5rem;
+    color: var(--Neutrals-neutral-02, #E8E8E8);
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 3px 8px 8px rgba(0, 0, 0, 0.60);
+}
+
+.card-collection-heading {
+    display: flex;
+    height: 7rem;
+    padding: 2rem;
+    padding-top: 6rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    align-self: stretch;
+}
+
+.card-collection {
+    display: flex;
+    padding: 2rem 12.5rem;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 2.5rem;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    width: 30rem;
+    height: 34rem;
+    overflow: hidden;
+    padding: 8rem 6.75rem 5rem 6.5rem;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3.125rem;
+    color: #FFF;
+    font-size: 2rem;
+}
+
+.card-1 {
+    background: linear-gradient(
+        0deg, rgba(0, 0, 0, 0.50) 0%,
+        rgba(0, 0, 0, 0.50) 100%),
+        url(/assets/images/sofas/Living/black_nomad/Arm-Detail-CG-MD-TF.webp) lightgray -374px 5.4px / 262.5% 100% no-repeat;
+}
+.card-2 {
+    background: linear-gradient(
+        0deg, rgba(0, 0, 0, 0.50) 0%,
+        rgba(0, 0, 0, 0.50) 100%),
+        url(/assets/images/sofas/Dining/harvest_extendable/DRTB-DT-HV-OK.webp) lightgray -374px 5.4px / 262.5% 100% no-repeat;    
+}
+.card-3 {
+    background: linear-gradient(
+        0deg, rgba(0, 0, 0, 0.50) 0%,
+        rgba(0, 0, 0, 0.50) 100%),
+        url(/assets/images/sofas/Living/nomad_velvet/Arm-Detail-CN-MD-UT.webp) lightgray -374px 5.4px / 262.5% 100% no-repeat;
+}
+
+.info-cards {
+    display: flex;
+    width: 100vw;
+    padding: 3rem 12.5rem;
+    background: var(--Brand-Secondary, #F7EEE3);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    align-self: stretch;
+}
+
+.card-type {
+    display: flex;
+    width: 30rem;
+    overflow: hidden;
+    padding: 1.8rem 1.6rem;
+    background: var(--Brand-Secondary, #F7EEE3);
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.card-title {
+    align-self: stretch;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.card-content {
+    align-self: stretch;
+    line-height: 1.5;
+}
+
+.modular-video-section {
+    display: flex;
+    width: 100vw;
+    padding: 3.2rem 0rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+}
+
+.video-title {
+    color: #000;
+    text-align: center;
+    display: flex;
+    width: 70rem;
+    padding: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.video-frame {
+    width: 100vw;
+    overflow: hidden;
+    align-self: stretch;
+}
+
+video {
+    height: 35rem;
+}

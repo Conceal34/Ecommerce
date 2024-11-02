@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burrow | Checkout</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" />
+    <link rel="stylesheet" type="text/css" href="/css/shared.css" />
+    <link rel="stylesheet" type="text/css" href="/css/checkout.css" />
+</head>
+
+<body>
+    <div class="nav-bar">
+        <div class="nav-heading">
+            <form action="/" method="get">
+                <button type="submit">
+                    <span class="burrow">BURROW</span>
+                </button>
+            </form>
+        </div>
+        <div class="nav-items">
+            <form action="/Living" method="get">
+                <button type="submit">
+                    <div class="nav-item">
+                        <span class="shop-seating">LIVING SEATING</span>
+                    </div>
+                </button>
+            </form>
+            <form action="/Dining" method="get">
+                <button type="submit">
+                    <div class="nav-item">
+                        <span class="shop-seating-8">DINING SEATING</span>
+                    </div>
+                </button>
+            </form>
+            <form action="/Outdoor" method="get">
+                <button type="submit">
+                    <div class="nav-item">
+                        <span class="shop-seating-d">OUTDOOR SEATING</span>
+                    </div>
+                </button>
+            </form>
+        </div>
+        <div class="nav-btns">
+            <div class="shopping-cart">
+                <form action="/cart" method="get">
+                    <button type="submit">
+                        <img src="/assets/icons/shopping_cart.svg" alt="" srcset="">
+                    </button>
+                </form>
+            </div>
+            <div class="account-circle-navbar">
+                <form action="/account" method="get">
+                    <button type="submit">
+                        <img src="/assets/icons/account_circle_navbar.svg" alt="" srcset="">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <form action="/checkout" method="post" class="main">
+        <div class="details">
+            <h1 class="shipping-address">Shipping Address</h1>
+            <div class="shipping-details">
+                <input type="text" name="fName" value="<%= user.fname %>" id="" placeholder="First Name*">
+                <input type="text" name="lName" value="<%= user.lname%>" id="" placeholder="Last Name*">
+                <input type="text" name="aptt" value="<%= user.aptt %>" id="" placeholder="Apartment/ Society/ Building">
+                <input type="text" name="city" value="<%= user.city %>" id="" placeholder="City*">
+                <input type="text" name="state" value="<%= user.state %>" id="" placeholder="State*">
+                <input type="number" name="pinCode" value="<%= user.pinCode %>" id="" placeholder="Postal Code*">
+                <input type="tel" name="phNum" value="<%= user.phNum %>" id="" placeholder="Phone No*">
+            </div>
+            <input type="submit" value="CONTINUE TO PAYMENT" class="btn-primary">
+        </div>
+        <div class="summary">
+            <h1 class="checkout-headings">Order Summary</h1>
+            <div class="no-of-items">
+                <%= items %> items
+            </div>
+            <div class="subtotal">
+                <span class="subtotal-text">Subtotal</span>
+                <span class="subtotal-amount">$<%= subTotal %></span>
+            </div>
+            <div class="tax">
+                <span class="tax-text">Tax</span>
+                <span class="tax-amount">$<%= tax%></span>
+            </div>
+            <div class="total">
+                <span class="total-text">Total</span>
+                <span class="total-amount">$<%= total %></span>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "e-commerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.0",
+    "express-session": "^1.18.0",
+    "lodash": "^4.17.21",
+    "nodemon": "^3.1.7",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.13.0",
+    "postgres": "^3.4.4"
+  }
+}

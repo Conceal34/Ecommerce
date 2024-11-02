@@ -1,0 +1,87 @@
+.card-collection {
+    display: flex;
+    padding: 3.125rem 12.5rem 7.5rem 12.5rem;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 6rem;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    display: flex;
+    width: 30rem;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.photo-of-product {
+    height: 18rem;
+    overflow: hidden;
+    align-self: stretch;
+}
+
+.product-description {
+    padding: 0.5rem 0.5rem 0rem 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0rem;
+    align-self: stretch;
+}
+
+.product-description * {
+    text-align: left;
+    align-self: stretch;
+    margin-bottom: -0.25rem;
+}
+
+.name-of-item {
+    font-weight: 600;
+}
+
+.price {
+    font-style: italic;
+    font-weight: 300;
+}
+
+.colors {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.different-colors {
+    display: flex;
+    align-items: center;
+}
+
+.color {
+    width: 1.125rem;
+    height: 1.125rem;
+    border-radius: 100%;
+    margin: -0.125rem;
+}
+
+.color1 {
+    background-color: var(--Neutrals-neutral-14, #121212);
+}
+
+.color2 {
+    background-color: var(--Brand-Ternanry, #834E00);
+}
+
+.color3 {
+    background-color: #9BFF84;
+}
+
+.color4 {
+    background-color: var(--Brand-Accent, #F4EFE9);
+    
+}
+
+.color5 {
+    background-color: var(--Neutrals-neutral-05, #B3B3B3);
+    
+}

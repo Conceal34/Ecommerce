@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burrow | Product</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;0,700;1,300&display=swap" />
+    <link rel="stylesheet" type="text/css" href="/css/shared.css" />
+    <link rel="stylesheet" type="text/css" href="/css/product.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="nav-bar">
+        <div class="nav-heading">
+            <form action="/" method="get">
+                <button type="submit">
+                    <span class="burrow">BURROW</span>
+                </button>
+            </form>
+        </div>
+        <div class="nav-items">
+            <form action="/Living" method="get">
+                <button type="submit">
+                    <div class="nav-item">
+                        <span class="shop-seating">LIVING SEATING</span>
+                    </div>
+                </button>
+            </form>
+            <form action="/Dining" method="get">
+                <button type="submit">
+                    <div class="nav-item">
+                        <span class="shop-seating-8">DINING SEATING</span>
+                    </div>
+                </button>
+            </form>
+            <form action="/Outdoor" method="get">
+                <button type="submit">
+                    <div class="nav-item">
+                        <span class="shop-seating-d">OUTDOOR SEATING</span>
+                    </div>
+                </button>
+            </form>
+        </div>
+        <div class="nav-btns">
+            <div class="shopping-cart">
+                <form action="/cart" method="get">
+                    <button type="submit">
+                        <img src="/assets/icons/shopping_cart.svg" alt="" srcset="">
+                    </button>
+                </form>
+            </div>
+            <div class="account-circle-navbar">
+                <form action="/account" method="get">
+                    <button type="submit">
+                        <img src="/assets/icons/account_circle_navbar.svg" alt="" srcset="">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="product">
+            <div class="images-collection">
+                <!-- <div class="back-button">
+                    <img src="/assets/icons/arrow_back_ios.svg" alt="" srcset="">
+                </div>
+                <div class="forward-button">
+                    <img src="/assets/icons/arrow_back_ios.svg" alt="" srcset="">
+                </div> -->
+                <!-- this will be multiplied based on the no of images received -->
+                <div class="image">
+                    <% imgs.forEach(img=> { %>
+                        <img src="<%=imgsPath%>/<%=img%>">
+                        <% }); %>
+                </div>
+            </div>
+            <div class="product-description">
+                <h1 class="product-name">
+                    <%= product.name %>
+                </h1>
+                <span class="price">
+                    $ <%= product.price %>
+                </span>
+                <div class="colors-collection">
+                    <div class="material-colors">
+                        Material Colors
+                        <div class="colors">
+                            <div class="different-colors">
+                                <div class="color1 color"></div>
+                                <div class="color2 color"></div>
+                                <div class="color3 color"></div>
+                                <div class="color4 color"></div>
+                                <div class="color5 color"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leg-colors">
+                        Leg Colors
+                        <div class="colors">
+                            <div class="different-colors">
+                                <div class="color1 color"></div>
+                                <div class="color2 color"></div>
+                                <div class="color3 color"></div>
+                                <div class="color4 color"></div>
+                                <div class="color5 color"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quantity">
+                    <button onclick="decrease_qty()" type="button">
+                        <div class="remove">-</div>
+                    </button>
+                    <div class="qty-num" name="qty">
+                        1
+                    </div>
+                    <button onclick="increase_qty()" type="button">
+                        <div class="add">+</div>
+                    </button>
+                </div>
+                <form action="/product" method="post">
+                    <input type="text" name="pid" class="pid" style="display: none;" value="<%= product.id %>">
+                    <input type="text" name="qty" class="qty" style="display: none;" value = 1>
+                    <input type="submit" value="ADD TO CART" class="btn-primary">
+                </form>
+            </div>
+        </div>
+        <div class="description">
+            <div class="left-frame">
+                <span class="description-heading">Descirption</span>
+                <span class="description-desc">
+                    <%= product.description %>
+                </span>
+            </div>
+            <div class="right-frame">
+                <span class="description-heading">Dimensions</span>
+                <div class="particulars-collection">
+                    <div class="particular">
+                        <span class="general-dimension">General dimension</span>
+                        <span class="general-dimension-2e">
+                            <%= product.l %>’’x <%= product.b %>’’ x <%= product.h %>’’
+                        </span>
+                    </div>
+                    <% if(product.seatheight !=null) { %>
+                        <div class="particular">
+                            <span class="seat-height">Seat Height</span>
+                            <span class="seat-height-30">
+                                <%= product.seatheight %>’’
+                            </span>
+                        </div>
+                        <% } %>
+                            <% if(product.armheight !=null) { %>
+                                <div class="particular">
+                                    <span class="arm-height">Arm Height</span>
+                                    <span class="arm-height-32">
+                                        <%=product.armheight%>’’
+                                    </span>
+                                </div>
+                                <% } %>
+                                    <% if(product.seatdepth !=null) { %>
+                                        <div class="particular">
+                                            <span class="seat-depth">Seat Depth</span>
+                                            <span class="seat-depth-34">
+                                                <%=product.seatdepth%>’’
+                                            </span>
+                                        </div>
+                                        <% } %>
+                                            <% if(product.legheight !=null) { %>
+                                                <div class="particular">
+                                                    <span class="leg-height">Leg Height</span>
+                                                    <span class="leg-height-36">
+                                                        <%=product.legheight%>’’
+                                                    </span>
+                                                </div>
+                                                <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="contact-section">
+            <form action="/newsletter" method="post">
+                <input type="text" class="newsletter-input" name="newsletter"
+                    placeholder="Sign up for enthralling couch reads">
+                <input type="submit" value="SUBSCRIBE" class="newsletter-btn">
+            </form>
+            <div class="social-media-icons">
+                <div class="icon-twitter">
+                    <img src="/assets/icons/twitter.svg" class="footer-icons" alt="" srcset="">
+                </div>
+                <div class="icon-facebook">
+                    <img src="/assets/icons/facebook.svg" class="footer-icons" alt="" srcset="">
+                </div>
+                <div class="icon-instagram">
+                    <img src="/assets/icons/instagram.svg" class="footer-icons" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+        <div class="site-info">
+            <div class="copyright_n_terms">
+                <span class="copyright">
+                    Copyright © Vinner Designed by Vinner
+                </span>
+                <span class="terms">
+                    Terms n conditions Privacy - Do not sell my personal information
+                </span>
+            </div>
+            <span class="personal-info">This site may collect and disclose the personal information
+                collected
+            </span>
+        </div>
+    </div>
+    <script src="/js/product.js"></script>
+</body>
+
+</html>

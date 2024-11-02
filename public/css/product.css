@@ -1,0 +1,204 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product {
+    display: inline-flex;
+    padding-top: 3.5rem;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 6.25rem;
+}
+
+.images-collection {
+    position: relative;
+    width: 42.5rem;
+    height: 25rem;
+    overflow: hidden;
+}
+
+.image {
+    display: flex;
+    gap: 0;
+    width: 44.5rem;
+    height: 25rem;
+}
+.image>img {
+    width: 100%;
+    height: 100%;
+    animation: image_movement 18s infinite ease-in-out alternate;
+    transition: all;
+}
+@keyframes image_movement {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-300%);
+    }
+}
+
+.back-button,
+.forward-button {
+    position: absolute;
+    display: flex;
+    width: 3rem;
+    height: 25rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+    transition: all;
+}
+
+.back-button:hover,
+.forward-button:hover {
+    background: rgba(71, 71, 71, 0.4);
+}
+
+.forward-button {
+    right: 0;
+    transform: rotate(180deg);
+}
+
+.back-button>img,
+.forward-button>img {
+    fill: var(--Neutrals-neutral-12, #363636);
+    width: 1.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+}
+
+.product-description {
+    display: flex;
+    width: 30rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    text-align: left;
+}
+
+.price {
+    align-self: stretch;
+    font-weight: 700;
+    text-align: left;
+}
+
+.colors-collection {
+    text-align: left;
+    display: flex;
+    width: 15rem;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.material-colors,
+.leg-colors {
+    align-self: stretch;
+}
+
+.different-colors {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.color {
+    width: 1.125rem;
+    height: 1.125rem;
+    border-radius: 100%;
+}
+
+.color1 {
+    background-color: var(--Neutrals-neutral-14, #121212);
+}
+
+.color2 {
+    background-color: var(--Brand-Ternanry, #834E00);
+}
+
+.color3 {
+    background-color: #9BFF84;
+}
+
+.color4 {
+    background-color: var(--Brand-Accent, #F4EFE9);
+
+}
+
+.color5 {
+    background-color: var(--Neutrals-neutral-05, #B3B3B3);
+
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.remove,
+.add,
+.qty-num {
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    padding: 0.7rem 0.3rem;
+    border-radius: 0.4rem;
+    background: #D9D9D9;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.qty-num {
+    background: initial;
+}
+
+.description {
+    display: inline-flex;
+    padding: 3rem 0rem;
+    align-items: flex-start;
+    gap: 12rem;
+    text-align: left;
+}
+
+.left-frame {
+    display: flex;
+    width: 31.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+}
+
+.right-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6875rem;
+}
+
+.description-heading {
+    align-self: stretch;
+    font-weight: 500;
+    font-size: var(--h1-desktop-size, 3.2rem);
+}
+
+.particulars-collection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.375rem;
+    align-self: stretch;
+}
+
+.particular {
+    display: flex;
+    padding: 0.25rem 0rem;
+    border-bottom: 1px solid #000;
+    align-items: center;
+    gap: 4rem;
+    align-self: stretch;
+}

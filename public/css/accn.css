@@ -1,0 +1,107 @@
+.main-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.heading {
+    display: flex;
+    width: 65rem;
+    padding: 1.875rem 0.5rem 0.625rem 0.5rem;
+    border-bottom: 2px solid #000;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content {
+    width: 65rem;
+    display: inline-flex;
+    padding: 5.625rem 0rem;
+    align-items: flex-start;
+    gap: 2.5rem;
+}
+
+.account {
+    display: flex;
+    width: 20rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.125rem;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: -0.125rem;
+    align-self: stretch;
+}
+
+.user * {
+    align-self: stretch;
+}
+
+.user>.name {
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.info {
+    display: flex;
+    width: 42.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8125rem;
+    text-align: left;
+}
+
+.info-heading {
+    align-self: stretch;
+    font-size: 2rem;
+}
+
+.info-description {
+    align-self: stretch;
+}
+
+.info-cards {
+    display: flex;
+    width: 42.5rem;
+    padding: 0.5rem 0rem;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    display: flex;
+    width: 20rem;
+    padding: 1.25rem 1.625rem;
+    border-radius: 0.9rem;
+    background: var(--Neutrals-neutral-03, #D6D6D6);
+    align-items: center;
+    gap: 5.4rem;
+    flex-shrink: 0;
+}
+
+.card-description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    flex: 1 0 0;
+}
+
+.card-heading-description {
+    font-weight: 400;
+}
+
+.card-heading {
+    font-weight: 700;
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burrow | Cart</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;0,700;1,300&display=swap" />
+    <link rel="stylesheet" type="text/css" href="/css/shared.css" />
+    <link rel="stylesheet" type="text/css" href="/css/cart.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="nav-bar">
+        <div class="nav-heading">
+            <form action="/" method="get">
+                <button type="submit">
+                    <span class="burrow">BURROW</span>
+                </button>
+            </form>
+        </div>
+        <div class="nav-items">
+            <form action="/Living" method="get">
+                <button type="submit">
+                    <div class="nav-item">
+                        <span class="shop-seating">LIVING SEATING</span>
+                    </div>
+                </button>
+            </form>
+            <form action="/Dining" method="get">
+                <button type="submit">
+                    <div class="nav-item">
+                        <span class="shop-seating-8">DINING SEATING</span>
+                    </div>
+                </button>
+            </form>
+            <form action="/Outdoor" method="get">
+                <button type="submit">
+                    <div class="nav-item">
+                        <span class="shop-seating-d">OUTDOOR SEATING</span>
+                    </div>
+                </button>
+            </form>
+        </div>
+        <div class="nav-btns">
+            <div class="shopping-cart">
+                <form action="/cart" method="get">
+                    <button type="submit">
+                        <img src="/assets/icons/shopping_cart.svg" alt="" srcset="">
+                    </button>
+                </form>
+            </div>
+            <div class="account-circle-navbar">
+                <form action="/account" method="get">
+                    <button type="submit">
+                        <img src="/assets/icons/account_circle_navbar.svg" alt="" srcset="">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="main-section">
+        <div class="cart-items">
+            <% if (cart.length==0) { %>
+                <h1>Cart is Empty!!</h1>
+                <% } else { %>
+                    <% cartProducts.forEach(product=> { %>
+                        <form action="/product/::<%= product.name %>" method="get">
+                            <div class="item-in-cart">
+                                <button type="submit">
+                                    <div class="photo-of-product" style="background-image: url(<%= product.path %>);">
+                                    </div>
+                                </button>
+                        </form>
+                        <div class="product-description">
+                            <div class="quantity">
+                                <button type="button" onclick='
+                                        if (Number($(".id_<%=product.id%>").html()) > 1) {
+                                            $(".id_<%=product.id%>").html(String(Number($(".id_<%=product.id%>").html()) - 1));
+                                            setTimeout(calcTotal(), 1000);
+                                        }
+                                    '>
+                                    <div class="remove">-</div>
+                                </button>
+                                <% cart.forEach(item=> {%>
+                                    <% if(item.pid==product.id) { %>
+                                        <div class="qty-num id_<%=product.id%>">
+                                            <%= item.qty %>
+                                        </div>
+                                        <%} %>
+                                            <% }) %>
+                                                <button type="button" onclick='
+                                        $(".id_<%=product.id%>").html(String(Number($(".id_<%=product.id%>").html()) + 1));
+                                        setTimeout(calcTotal(), 1000);
+                                    '>
+                                                    <div class="add">+</div>
+                                                </button>
+                            </div>
+                            <div class="item-detail">
+                                <span class="name-of-item">
+                                    <%= product.name %>
+                                </span>
+                                <span class="price">Price: $<%= product.price%></span>
+                            </div>
+                        </div>
+        </div>
+        <% }); %>
+            <% } %>
+    </div>
+    <div class="cart-info">
+        <div class="cart-details">
+            <span class="subTotal">SubTotal: $</span>
+            <span class="totalItems">Items: <%=cart.length %></span>
+        </div>
+        <form action="/cart" method="post">
+            <input type="text" name="subTotal" style="display: none;" id="subTotal">
+            <input type="submit" value="Checkout" class="btn-primary">
+        </form>
+    </div>
+    </div>
+    <div class="footer">
+        <div class="contact-section">
+            <form action="/newsletter" method="post">
+                <input type="text" class="newsletter-input" name="newsletter"
+                    placeholder="Sign up for enthralling couch reads">
+                <input type="submit" value="SUBSCRIBE" class="newsletter-btn">
+            </form>
+            <div class="social-media-icons">
+                <div class="icon-twitter">
+                    <img src="/assets/icons/twitter.svg" class="footer-icons" alt="" srcset="">
+                </div>
+                <div class="icon-facebook">
+                    <img src="/assets/icons/facebook.svg" class="footer-icons" alt="" srcset="">
+                </div>
+                <div class="icon-instagram">
+                    <img src="/assets/icons/instagram.svg" class="footer-icons" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+        <div class="site-info">
+            <div class="copyright_n_terms">
+                <span class="copyright">
+                    Copyright © Vinner Designed by Vinner
+                </span>
+                <span class="terms">
+                    Terms n conditions Privacy - Do not sell my personal information
+                </span>
+            </div>
+            <span class="personal-info">This site may collect and disclose the personal information
+                collected
+            </span>
+        </div>
+    </div>
+    <script src="/js/cart.js"></script>
+</body>
+
+</html>

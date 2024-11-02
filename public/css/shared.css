@@ -1,0 +1,219 @@
+/* holds the styles for reset of css, navbar and footer */
+:root {
+    --Brand-Accent: #F4EFE9;
+    --Brand-Primart: #FCEE71;
+    --Brand-Seconday: #F7EEE3;
+    --Brand-Ternanry: #834E00;
+    --Brand-Text: #383633;
+
+    --default-font: "Comic Neue";
+    --h1-desktop-size: 3.2rem;
+    --ui-desktop-size: 1.4rem;
+}
+
+html {
+    font-size: 10px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--default-font);
+    font-weight: 400;
+    font-size: var(--ui-desktop-size);
+    line-height: 1.7;
+    color: var(--Brand-Text);
+    width: 100vw;
+    text-align: center;
+    overflow-x: hidden;
+    background-color: var(--Brand-Accent);
+}
+
+h1 {
+    font-size: var(--h1-desktop-size);
+}
+
+button {
+    all: unset;
+}
+
+.nav-bar {
+    display: flex;
+    width: 100vw;
+    height: 5rem;
+    max-height: 5rem;
+    background: var(--Brand-Accent);
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.nav-heading {
+    display: flex;
+    padding-left: 1.5rem;
+    align-items: center;
+    gap: -1.5rem;
+    color: var(--Brand-Ternanry, #834E00);
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 0.25rem;
+}
+
+.nav-items {
+    display: flex;
+    padding: 0rem 1.125rem;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4rem;
+    flex: 1 0 0;
+}
+
+.nav-btns {
+    display: flex;
+    height: 3rem;
+    padding: 0rem 3rem 0rem 4.5rem;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-section {
+    display: flex;
+    padding: 3.125rem 12.5rem;
+    background: var(--Neutrals-neutral-04, #C4C4C4);
+    justify-content: center;
+    align-items: center;
+    gap: 10.5rem;
+    align-self: stretch;
+}
+
+.contact-section>form {
+    display: flex;
+    align-items: center;
+    border: 0.3rem solid var(--Brand-Ternanry, #834E00);
+}
+
+.newsletter-input {
+    display: flex;
+    width: 32rem;
+    padding: 1rem 1.5rem;
+    color: var(--Brand-Ternanry, #834E00);
+    font-weight: 700;
+    background: var(--Brand-Accent, #F4EFE9);
+    outline: none;
+}
+
+::-webkit-input-placeholder {
+    color: var(--Brand-Ternanry, #834E00);
+}
+
+.newsletter-btn {
+    all: initial;
+    padding: 1rem 1.5rem;
+    background: var(--Brand-Ternanry, #834E00);
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border: 0.1rem solid var(--Brand-Ternanry, #834E00);
+    cursor: pointer;
+    color: var(--Neutrals-neutral-01, #FAFAFA);
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.4rem;
+    flex: 1 0 0;
+}
+
+.site-info {
+    display: flex;
+    padding: 6.25rem 12.5rem;
+    background: var(--Neutrals-neutral-08, #7D7D7D);
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 1.6rem 10rem;
+    align-self: stretch;
+    flex-wrap: wrap;
+    color: var(--Brand-Accent, #F4EFE9);
+}
+
+.copyright_n_terms {
+    display: flex;
+    align-items: center;
+    gap: 9rem;
+}
+
+
+.copyright {
+    font-weight: 700;
+}
+
+.terms {
+    width: 20rem;
+}
+
+.btn-primary {
+    all: unset;
+    outline: none;
+    display: inline-flex;
+    padding: 1rem 2rem;
+    border-radius: 0.625rem;
+    background: var(--Brand-Primary, #FCEE71);
+    border-color: var(--Brand-Primart);
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--Neutrals-neutral-13, #242424);
+    font-size: 0.9rem;
+}
+
+.btn-primary:hover {
+    color: var(--Neutrals-neutral-01, #FAFAFA);
+    border-radius: 0;
+    transition: all;
+}
+
+.btn-secondary {
+    all: unset;
+    outline: none;
+    display: inline-flex;
+    padding: 1rem 2rem;
+    border-radius: 0.625rem;
+    background: var(--Neutrals-neutral-01, #FAFAFA);
+    border-color: var(--Neutrals-neutral-01);
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--Neutrals-neutral-13, #242424);
+    font-size: 0.9rem;
+}
+
+.btn-secondary:hover {
+    border-radius: 0;
+    color: var(--Brand-Secondary, #F7EEE3);
+    transition: all;
+}
+
+input {
+    display: flex;
+    padding: 0.625rem 1rem;
+    align-items: center;
+    gap: 0.5rem;
+    align-self: stretch;
+    border-radius: 0.4rem;
+    border: 1px solid var(--Neutrals-neutral-03, #D6D6D6);
+}
